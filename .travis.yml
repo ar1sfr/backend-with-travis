@@ -14,8 +14,8 @@ env:
   - NODE_ENV=test
 
 before_script:
-  - psql -c 'create database book_test;' -U postgres
-  - psql -c "CREATE USER postgres WITH PASSWORD 'admin';" -U postgres
+  - psql -c 'create database book_test;'
+  - psql -c "CREATE USER postgres WITH PASSWORD 'admin';"
   - npm run build
   - npm install -g sequelize-cli
   - sequelize db:migrate
